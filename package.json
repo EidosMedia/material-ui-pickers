@@ -7,7 +7,7 @@
     "doc": "docs",
     "lib": "lib"
   },
-  "private": false,
+  "private": true,
   "workspaces": [
     "lib",
     "docs"
@@ -15,6 +15,8 @@
   "scripts": {
     "start": "yarn dev",
     "dev": "yarn workspace docs dev",
+    "release": "yarn workspace @eidosmedia/material-ui-pickers release && git push && git push --tags",
+    "build": "yarn workspace @eidosmedia/material-ui-pickers build",
     "e2e:open": "cypress open",
     "e2e:run": "cypress run",
     "docgen": "node docs/scripts/docgen.js",
