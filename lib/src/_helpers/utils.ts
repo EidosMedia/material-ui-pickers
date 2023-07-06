@@ -8,3 +8,10 @@ export function arrayIncludes<T>(array: T[], itemOrItems: T | T[]) {
 }
 
 export type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+
+/** Quick untyped helper to improve function composition readability */
+export const pipe = (...fns: ((...args: any[]) => any)[]) =>
+  fns.reduceRight(
+    (prevFn, nextFn) => (...args) => nextFn(prevFn(...args)),
+    value => value
+  );

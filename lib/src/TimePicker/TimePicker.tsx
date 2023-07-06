@@ -6,6 +6,7 @@ import { timePickerDefaultProps } from '../constants/prop-types';
 import { usePickerState } from '../_shared/hooks/usePickerState';
 import { pick12hOr24hFormat } from '../_helpers/text-field-helper';
 import { useKeyboardPickerState } from '../_shared/hooks/useKeyboardPickerState';
+import { ParsableDate } from '../constants/prop-types';
 import {
   WithKeyboardInputProps,
   makePickerWithState,
@@ -25,6 +26,12 @@ export interface BaseTimePickerProps {
    * @default 1
    */
   minutesStep?: number;
+  /** Min time, date part by default, will be ignored */
+  minTime?: ParsableDate;
+  /** Max time, date part by default, will be ignored */
+  maxTime?: ParsableDate;
+  /** Dynamically check if time is disabled or not */
+  shouldDisableTime?: (timeValue: number, clockType: 'hours' | 'minutes' | 'seconds') => boolean;
 }
 
 export interface TimePickerViewsProps extends BaseTimePickerProps {

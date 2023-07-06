@@ -1,5 +1,6 @@
 import { IUtils } from '@date-io/core/IUtils';
 import { MaterialUiPickersDate } from '../typings/date';
+import { MuiPickersAdapter } from '../_shared/hooks/useUtils';
 
 const center = {
   x: 260 / 2,
@@ -64,20 +65,34 @@ export const getMeridiem = (
   return utils.getHours(date) >= 12 ? 'pm' : 'am';
 };
 
+export const convertValueToMeridiem = (value: number, meridiem: 'am' | 'pm', ampm: boolean) => {
+  if (ampm) {
+    const currentMeridiem = value >= 12 ? 'pm' : 'am';
+    if (currentMeridiem !== meridiem) {
+      return meridiem === 'am' ? value - 12 : value + 12;
+    }
+  }
+
+  return value;
+};
+
 export const convertToMeridiem = (
   time: MaterialUiPickersDate,
   meridiem: 'am' | 'pm',
   ampm: boolean,
   utils: IUtils<MaterialUiPickersDate>
 ) => {
-  if (ampm) {
-    const currentMeridiem = utils.getHours(time) >= 12 ? 'pm' : 'am';
-    if (currentMeridiem !== meridiem) {
-      const hours = meridiem === 'am' ? utils.getHours(time) - 12 : utils.getHours(time) + 12;
+  const newHoursAmount = convertValueToMeridiem(utils.getHours(time), meridiem, ampm);
+  return utils.setHours(time, newHoursAmount);
+};
 
-      return utils.setHours(time, hours);
-    }
-  }
+export function getSecondsInDay(date: unknown, utils: MuiPickersAdapter) {
+  return utils.getHours(date) * 3600 + utils.getMinutes(date) * 60 + utils.getSeconds(date);
+}
 
-  return time;
+export const createIsAfterIgnoreDatePart = (utils: MuiPickersAdapter) => (
+  dateLeft: MaterialUiPickersDate,
+  dateRight: MaterialUiPickersDate
+) => {
+  return getSecondsInDay(dateLeft, utils) > getSecondsInDay(dateRight, utils);
 };

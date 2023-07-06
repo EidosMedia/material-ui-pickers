@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, fade } from '@material-ui/core/styles';
 
 const positions: Record<number, [number, number]> = {
   0: [0, 40],
@@ -35,11 +35,14 @@ export interface ClockNumberProps {
   label: string;
   selected: boolean;
   isInner?: boolean;
+  disabled: boolean;
 }
 
 export const useStyles = makeStyles(
   theme => {
     const size = theme.spacing(4);
+    const clockNumberColor =
+      theme.palette.type === 'light' ? theme.palette.text.primary : theme.palette.text.hint;
 
     return {
       clockNumber: {
@@ -52,21 +55,31 @@ export const useStyles = makeStyles(
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '50%',
-        color:
-          theme.palette.type === 'light' ? theme.palette.text.primary : theme.palette.text.hint,
+        color: clockNumberColor,
       },
       clockNumberSelected: {
         color: theme.palette.primary.contrastText,
+      },
+      clockNumberDisabled: {
+        pointerEvents: 'none',
+        color: fade(clockNumberColor, 0.2),
       },
     };
   },
   { name: 'MuiPickersClockNumber' }
 );
 
-export const ClockNumber: React.FC<ClockNumberProps> = ({ selected, label, index, isInner }) => {
+export const ClockNumber: React.FC<ClockNumberProps> = ({
+  selected,
+  label,
+  index,
+  isInner,
+  disabled,
+}) => {
   const classes = useStyles();
   const className = clsx(classes.clockNumber, {
     [classes.clockNumberSelected]: selected,
+    [classes.clockNumberDisabled]: disabled,
   });
 
   const transformStyle = React.useMemo(() => {
@@ -84,6 +97,7 @@ export const ClockNumber: React.FC<ClockNumberProps> = ({ selected, label, index
       variant={isInner ? 'body2' : 'body1'}
       style={transformStyle}
       children={label}
+      tabIndex={disabled ? -1 : 0}
     />
   );
 };

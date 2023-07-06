@@ -1797,6 +1797,45 @@
       "type": {
         "name": "number"
       }
+    },
+    "minTime": {
+      "defaultValue": null,
+      "description": "Min time, date part by default, will be ignored",
+      "name": "minTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxTime": {
+      "defaultValue": null,
+      "description": "Max time, date part by default, will be ignored",
+      "name": "maxTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "shouldDisableTime": {
+      "defaultValue": null,
+      "description": "Dynamically check if time is disabled or not",
+      "name": "shouldDisableTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
+      }
     }
   },
   "KeyboardTimePicker": {
@@ -2306,6 +2345,45 @@
       "type": {
         "name": "number"
       }
+    },
+    "minTime": {
+      "defaultValue": null,
+      "description": "Min time, date part by default, will be ignored",
+      "name": "minTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxTime": {
+      "defaultValue": null,
+      "description": "Max time, date part by default, will be ignored",
+      "name": "maxTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "shouldDisableTime": {
+      "defaultValue": null,
+      "description": "Dynamically check if time is disabled or not",
+      "name": "shouldDisableTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
+      }
     }
   },
   "DateTimePicker": {
@@ -2745,6 +2823,45 @@
       "required": false,
       "type": {
         "name": "number"
+      }
+    },
+    "minTime": {
+      "defaultValue": null,
+      "description": "Min time, date part by default, will be ignored",
+      "name": "minTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxTime": {
+      "defaultValue": null,
+      "description": "Max time, date part by default, will be ignored",
+      "name": "maxTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "shouldDisableTime": {
+      "defaultValue": null,
+      "description": "Dynamically check if time is disabled or not",
+      "name": "shouldDisableTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
       }
     },
     "minDate": {
@@ -3517,6 +3634,45 @@
         "name": "number"
       }
     },
+    "minTime": {
+      "defaultValue": null,
+      "description": "Min time, date part by default, will be ignored",
+      "name": "minTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxTime": {
+      "defaultValue": null,
+      "description": "Max time, date part by default, will be ignored",
+      "name": "maxTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "shouldDisableTime": {
+      "defaultValue": null,
+      "description": "Dynamically check if time is disabled or not",
+      "name": "shouldDisableTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
+      }
+    },
     "minDate": {
       "defaultValue": {
         "value": "Date(1900-01-01)"
@@ -4004,6 +4160,45 @@
         "name": "number"
       }
     },
+    "minTime": {
+      "defaultValue": null,
+      "description": "Min time, date part by default, will be ignored",
+      "name": "minTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxTime": {
+      "defaultValue": null,
+      "description": "Max time, date part by default, will be ignored",
+      "name": "maxTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "shouldDisableTime": {
+      "defaultValue": null,
+      "description": "Dynamically check if time is disabled or not",
+      "name": "shouldDisableTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
+      }
+    },
     "onHourChange": {
       "defaultValue": null,
       "description": "On hour change",
@@ -4099,6 +4294,45 @@
       "required": false,
       "type": {
         "name": "number"
+      }
+    },
+    "minTime": {
+      "defaultValue": null,
+      "description": "Min time, date part by default, will be ignored",
+      "name": "minTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxTime": {
+      "defaultValue": null,
+      "description": "Max time, date part by default, will be ignored",
+      "name": "maxTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "shouldDisableTime": {
+      "defaultValue": null,
+      "description": "Dynamically check if time is disabled or not",
+      "name": "shouldDisableTime",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
       }
     },
     "onHourChange": {

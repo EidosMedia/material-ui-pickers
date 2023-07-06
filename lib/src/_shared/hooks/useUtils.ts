@@ -3,6 +3,8 @@ import { IUtils } from '@date-io/core/IUtils';
 import { MaterialUiPickersDate } from '../../typings/date';
 import { MuiPickersContext } from '../../MuiPickersUtilsProvider';
 
+export type MuiPickersAdapter<TDate = unknown> = IUtils<TDate>;
+
 export const checkUtils = (utils: IUtils<MaterialUiPickersDate> | null | undefined) => {
   if (!utils) {
     // tslint:disable-next-line

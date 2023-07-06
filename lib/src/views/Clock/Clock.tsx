@@ -8,6 +8,7 @@ import { withStyles, createStyles, WithStyles, Theme } from '@material-ui/core/s
 export interface ClockProps extends WithStyles<typeof styles> {
   type: ClockViewType;
   value: number;
+  isTimeDisabled: (timeValue: number, type: ClockViewType) => boolean;
   onChange: (value: number, isFinish?: boolean) => void;
   ampm?: boolean;
   minutesStep?: number;
@@ -20,6 +21,7 @@ export class Clock extends React.Component<ClockProps> {
       Object.keys(ClockType).map(key => ClockType[key as keyof typeof ClockType])
     ).isRequired,
     value: PropTypes.number.isRequired,
+    isTimeDisabled: PropTypes.func.isRequired,
     onChange: PropTypes.func.isRequired,
     children: PropTypes.arrayOf(PropTypes.node).isRequired,
     ampm: PropTypes.bool,
@@ -33,6 +35,14 @@ export class Clock extends React.Component<ClockProps> {
   };
 
   public isMoving = false;
+
+  public handleChange = (newValue: number, isFinish: boolean) => {
+    if (this.props.isTimeDisabled(newValue, this.props.type)) {
+      return;
+    }
+
+    this.props.onChange(newValue, isFinish);
+  };
 
   public setTime(e: any, isFinish = false) {
     let { offsetX, offsetY } = e;
@@ -49,7 +59,7 @@ export class Clock extends React.Component<ClockProps> {
         ? getMinutes(offsetX, offsetY, this.props.minutesStep)
         : getHours(offsetX, offsetY, Boolean(this.props.ampm));
 
-    this.props.onChange(value, isFinish);
+    this.handleChange(value, isFinish);
   }
 
   public handleTouchMove = (e: React.TouchEvent) => {
@@ -95,7 +105,8 @@ export class Clock extends React.Component<ClockProps> {
   };
 
   public render() {
-    const { classes, value, children, type, ampm } = this.props;
+    const { classes, value, children, type, ampm, isTimeDisabled } = this.props;
+    const isSelectedTimeDisabled = isTimeDisabled(value, type);
 
     const isPointerInner = !ampm && type === ClockType.HOURS && (value < 1 || value > 12);
 
@@ -112,15 +123,18 @@ export class Clock extends React.Component<ClockProps> {
             onMouseMove={this.handleMove}
           />
 
-          <div className={classes.pin} />
+          {!isSelectedTimeDisabled && (
+            <>
+              <div className={classes.pin} />
 
-          <ClockPointer
-            type={type}
-            value={value}
-            isInner={isPointerInner}
-            hasSelected={this.hasSelected()}
-          />
-
+              <ClockPointer
+                type={type}
+                value={value}
+                isInner={isPointerInner}
+                hasSelected={this.hasSelected()}
+              />
+            </>
+          )}
           {children}
         </div>
       </div>

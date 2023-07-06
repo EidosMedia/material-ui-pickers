@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { BasePickerProps } from '../typings/BasePicker';
-import { Picker, ToolbarComponentProps } from './Picker';
-import { ExtendWrapper, Wrapper } from '../wrappers/Wrapper';
-import { PureDateInputProps } from '../_shared/PureDateInput';
 import { DateValidationProps } from '../_helpers/text-field-helper';
 import { KeyboardDateInputProps } from '../_shared/KeyboardDateInput';
-import { StateHookOptions, usePickerState } from '../_shared/hooks/usePickerState';
+import { PureDateInputProps } from '../_shared/PureDateInput';
 import {
   BaseKeyboardPickerProps,
   useKeyboardPickerState,
 } from '../_shared/hooks/useKeyboardPickerState';
+import { StateHookOptions, usePickerState } from '../_shared/hooks/usePickerState';
+import { BasePickerProps } from '../typings/BasePicker';
+import { ExtendWrapper, Wrapper } from '../wrappers/Wrapper';
+import { Picker, ToolbarComponentProps } from './Picker';
 
 export type WithKeyboardInputProps = DateValidationProps &
   BaseKeyboardPickerProps &
@@ -59,6 +59,8 @@ export function makePickerWithState<T extends any>({
       maxDateMessage,
       minDate,
       minDateMessage,
+      minTime,
+      maxTime,
       minutesStep,
       onAccept,
       onChange,
@@ -110,6 +112,8 @@ export function makePickerWithState<T extends any>({
           loadingIndicator={loadingIndicator}
           maxDate={maxDate}
           minDate={minDate}
+          maxTime={maxTime}
+          minTime={minTime}
           minutesStep={minutesStep}
           onMonthChange={onMonthChange}
           onYearChange={onYearChange}
