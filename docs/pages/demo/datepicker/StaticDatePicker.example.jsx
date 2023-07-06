@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DatePicker } from '@material-ui/pickers';
+import { DatePicker } from '@eidosmedia/material-ui-pickers';
 
 const StaticDatePicker = () => {
   const [date, changeDate] = useState(new Date());
