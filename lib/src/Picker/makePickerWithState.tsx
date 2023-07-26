@@ -61,6 +61,7 @@ export function makePickerWithState<T extends any>({
       minDateMessage,
       minTime,
       maxTime,
+      combineMinMaxTimeToMinMaxDates,
       minutesStep,
       onAccept,
       onChange,
@@ -114,6 +115,7 @@ export function makePickerWithState<T extends any>({
           minDate={minDate}
           maxTime={maxTime}
           minTime={minTime}
+          combineMinMaxTimeToMinMaxDates={combineMinMaxTimeToMinMaxDates}
           minutesStep={minutesStep}
           onMonthChange={onMonthChange}
           onYearChange={onYearChange}

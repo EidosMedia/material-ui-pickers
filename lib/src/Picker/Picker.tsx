@@ -159,6 +159,8 @@ export const Picker: React.FunctionComponent<PickerProps> = ({
             onHourChange={handleChangeAndOpenNext}
             onMinutesChange={handleChangeAndOpenNext}
             onSecondsChange={handleChangeAndOpenNext}
+            minDate={minDate}
+            maxDate={maxDate}
           />
         )}
       </div>

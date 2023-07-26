@@ -30,6 +30,12 @@ export interface BaseTimePickerProps {
   minTime?: ParsableDate;
   /** Max time, date part by default, will be ignored */
   maxTime?: ParsableDate;
+  /** If true, minTime and minDate (if populated) will be combined, same for maxTime and maxDate */
+  combineMinMaxTimeToMinMaxDates?: boolean;
+  /** Min date that will be combined with minTime if combineMinMaxTimeToMinMaxDates is true  */
+  minDate?: ParsableDate;
+  /** Max date that will be combined with maxTime if combineMinMaxTimeToMinMaxDates is true  */
+  maxDate?: ParsableDate;
   /** Dynamically check if time is disabled or not */
   shouldDisableTime?: (timeValue: number, clockType: 'hours' | 'minutes' | 'seconds') => boolean;
 }

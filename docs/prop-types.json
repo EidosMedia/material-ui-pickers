@@ -1824,6 +1824,45 @@
         "name": "ParsableDate"
       }
     },
+    "combineMinMaxTimeToMinMaxDates": {
+      "defaultValue": null,
+      "description": "If true, minTime and minDate (if populated) will be combined, same for maxTime and maxDate",
+      "name": "combineMinMaxTimeToMinMaxDates",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minDate": {
+      "defaultValue": null,
+      "description": "Min date that will be combined with minTime if combineMinMaxTimeToMinMaxDates is true",
+      "name": "minDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxDate": {
+      "defaultValue": null,
+      "description": "Max date that will be combined with maxTime if combineMinMaxTimeToMinMaxDates is true",
+      "name": "maxDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
     "shouldDisableTime": {
       "defaultValue": null,
       "description": "Dynamically check if time is disabled or not",
@@ -2372,6 +2411,45 @@
         "name": "ParsableDate"
       }
     },
+    "combineMinMaxTimeToMinMaxDates": {
+      "defaultValue": null,
+      "description": "If true, minTime and minDate (if populated) will be combined, same for maxTime and maxDate",
+      "name": "combineMinMaxTimeToMinMaxDates",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minDate": {
+      "defaultValue": null,
+      "description": "Min date that will be combined with minTime if combineMinMaxTimeToMinMaxDates is true",
+      "name": "minDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxDate": {
+      "defaultValue": null,
+      "description": "Max date that will be combined with maxTime if combineMinMaxTimeToMinMaxDates is true",
+      "name": "maxDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
     "shouldDisableTime": {
       "defaultValue": null,
       "description": "Dynamically check if time is disabled or not",
@@ -2851,6 +2929,49 @@
         "name": "ParsableDate"
       }
     },
+    "combineMinMaxTimeToMinMaxDates": {
+      "defaultValue": null,
+      "description": "If true, minTime and minDate (if populated) will be combined, same for maxTime and maxDate",
+      "name": "combineMinMaxTimeToMinMaxDates",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minDate": {
+      "defaultValue": {
+        "value": "Date(1900-01-01)"
+      },
+      "description": "Min date that will be combined with minTime if combineMinMaxTimeToMinMaxDates is true\nMin selectable date",
+      "name": "minDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxDate": {
+      "defaultValue": {
+        "value": "Date(2100-01-01)"
+      },
+      "description": "Max date that will be combined with maxTime if combineMinMaxTimeToMinMaxDates is true\nMax selectable date",
+      "name": "maxDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
     "shouldDisableTime": {
       "defaultValue": null,
       "description": "Dynamically check if time is disabled or not",
@@ -2862,36 +2983,6 @@
       "required": false,
       "type": {
         "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
-      }
-    },
-    "minDate": {
-      "defaultValue": {
-        "value": "Date(1900-01-01)"
-      },
-      "description": "Min selectable date",
-      "name": "minDate",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
-        "name": "BaseDatePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ParsableDate"
-      }
-    },
-    "maxDate": {
-      "defaultValue": {
-        "value": "Date(2100-01-01)"
-      },
-      "description": "Max selectable date",
-      "name": "maxDate",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
-        "name": "BaseDatePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ParsableDate"
       }
     },
     "strictCompareDates": {
@@ -3660,6 +3751,49 @@
         "name": "ParsableDate"
       }
     },
+    "combineMinMaxTimeToMinMaxDates": {
+      "defaultValue": null,
+      "description": "If true, minTime and minDate (if populated) will be combined, same for maxTime and maxDate",
+      "name": "combineMinMaxTimeToMinMaxDates",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minDate": {
+      "defaultValue": {
+        "value": "Date(1900-01-01)"
+      },
+      "description": "Min date that will be combined with minTime if combineMinMaxTimeToMinMaxDates is true\nMin selectable date",
+      "name": "minDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxDate": {
+      "defaultValue": {
+        "value": "Date(2100-01-01)"
+      },
+      "description": "Max date that will be combined with maxTime if combineMinMaxTimeToMinMaxDates is true\nMax selectable date",
+      "name": "maxDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/TimePicker/TimePicker.tsx",
+        "name": "BaseTimePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
     "shouldDisableTime": {
       "defaultValue": null,
       "description": "Dynamically check if time is disabled or not",
@@ -3671,36 +3805,6 @@
       "required": false,
       "type": {
         "name": "(timeValue: number, clockType: \"hours\" | \"minutes\" | \"seconds\") => boolean"
-      }
-    },
-    "minDate": {
-      "defaultValue": {
-        "value": "Date(1900-01-01)"
-      },
-      "description": "Min selectable date",
-      "name": "minDate",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
-        "name": "BaseDatePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ParsableDate"
-      }
-    },
-    "maxDate": {
-      "defaultValue": {
-        "value": "Date(2100-01-01)"
-      },
-      "description": "Max selectable date",
-      "name": "maxDate",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
-        "name": "BaseDatePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ParsableDate"
       }
     },
     "strictCompareDates": {
@@ -4237,6 +4341,45 @@
       "type": {
         "name": "(date: any, isFinish?: boolean) => void"
       }
+    },
+    "combineMinMaxTimeToMinMaxDates": {
+      "defaultValue": null,
+      "description": "If true minTime will be combined with minDate and maxTime will be combined with maxDate,\nif false minTime and maxTime will be applied to every selectable date",
+      "name": "combineMinMaxTimeToMinMaxDates",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minDate": {
+      "defaultValue": null,
+      "description": "Min date that will be combined with min time in case the combineMinMaxTimeToMinMaxDates is true",
+      "name": "minDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxDate": {
+      "defaultValue": null,
+      "description": "Max date that will be combined with max time in case the combineMinMaxTimeToMinMaxDates is true",
+      "name": "maxDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
     }
   },
   "ClockView": {
@@ -4372,6 +4515,45 @@
       "required": true,
       "type": {
         "name": "(date: any, isFinish?: boolean) => void"
+      }
+    },
+    "combineMinMaxTimeToMinMaxDates": {
+      "defaultValue": null,
+      "description": "If true minTime will be combined with minDate and maxTime will be combined with maxDate,\nif false minTime and maxTime will be applied to every selectable date",
+      "name": "combineMinMaxTimeToMinMaxDates",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "minDate": {
+      "defaultValue": null,
+      "description": "Min date that will be combined with min time in case the combineMinMaxTimeToMinMaxDates is true",
+      "name": "minDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
+      }
+    },
+    "maxDate": {
+      "defaultValue": null,
+      "description": "Max date that will be combined with max time in case the combineMinMaxTimeToMinMaxDates is true",
+      "name": "maxDate",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/views/Clock/ClockView.tsx",
+        "name": "TimePickerViewProps"
+      },
+      "required": false,
+      "type": {
+        "name": "ParsableDate"
       }
     }
   }
